@@ -13,7 +13,7 @@
 ActiveRecord::Schema[7.0].define(version: 2023_02_12_203507) do
   create_table "attached_members", force: :cascade do |t|
     t.string "name"
-    t.integer "phone"
+    t.string "phone"
   end
 
   create_table "gyms", force: :cascade do |t|
@@ -26,7 +26,7 @@ ActiveRecord::Schema[7.0].define(version: 2023_02_12_203507) do
     t.integer "tier_id"
     t.string "name"
     t.string "email"
-    t.integer "phone"
+    t.string "phone"
     t.integer "attached_member_id"
     t.index ["attached_member_id"], name: "index_memberships_on_attached_member_id"
     t.index ["gym_id"], name: "index_memberships_on_gym_id"

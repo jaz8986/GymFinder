@@ -44,7 +44,7 @@ Tier.create(
 40.times do 
     AttachedMember.create(
         name: Faker::Name.name,
-        phone: 333-333-3333,
+        phone: Faker::PhoneNumber.cell_phone.to_s,
     )
 end
 
@@ -55,7 +55,7 @@ end
         tier: Tier.find_by(name_of_tier: "Monthly"),
         name: Faker::Name.name,
         email: Faker::Internet.email,
-        phone: 333-333-3333,
+        phone: Faker::PhoneNumber.cell_phone.to_s,
         attached_member: AttachedMember.all.sample
     )
 end
@@ -66,7 +66,7 @@ end
         tier: Tier.find_by(name_of_tier: "Monthly"),
         name: Faker::Name.name,
         email: Faker::Internet.email,
-        phone: 333-333-3333,
+        phone: Faker::PhoneNumber.cell_phone.to_s,
         attached_member: AttachedMember.all.sample
     )
 end
