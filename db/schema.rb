@@ -19,6 +19,8 @@ ActiveRecord::Schema[7.0].define(version: 2023_02_12_203507) do
   create_table "gyms", force: :cascade do |t|
     t.string "name"
     t.string "address"
+    t.string "image"
+    t.string "rating"
   end
 
   create_table "memberships", force: :cascade do |t|
