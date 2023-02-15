@@ -10,6 +10,12 @@ class ApplicationController < Sinatra::Base
     gym.to_json
   end
 
+  get '/memberships' do 
+    #returns memberships from all gyms
+    memberships = Membership.all
+    memberships.to_json
+  end
+
   get '/gyms/:id/memberships' do
     gym = Gym.find params[:id]
     memberships = gym.memberships.all
