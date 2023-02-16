@@ -1,3 +1,3 @@
 class AttachedMember < ActiveRecord::Base
-    belongs_to :membership
+    has_many :memberships
 end

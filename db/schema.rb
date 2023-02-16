@@ -10,10 +10,11 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_02_12_203507) do
+ActiveRecord::Schema[7.0].define(version: 2023_02_16_001943) do
   create_table "attached_members", force: :cascade do |t|
     t.string "name"
     t.string "phone"
+    t.integer "membership_id"
   end
 
   create_table "gyms", force: :cascade do |t|

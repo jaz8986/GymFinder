@@ -50,6 +50,7 @@ Tier.create(
     AttachedMember.create(
         name: Faker::Name.name,
         phone: Faker::PhoneNumber.cell_phone.to_s,
+        membership_id: Membership.ids.sample
     )
 end
 
