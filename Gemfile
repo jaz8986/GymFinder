@@ -2,6 +2,8 @@ source "https://rubygems.org"
 
 gem "rack-cors", "~> 1.1"
 
+gem "rack-contrib", "~> 2.3"
+
 gem "faker"
 
 gem "sinatra"

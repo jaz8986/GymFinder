@@ -21,58 +21,56 @@ Gym.create(
 
 #Tier
 Tier.create(
-    gym: Gym.find_by(name: "Zoo Culture"),
+    gym_id: Gym.first.id,
     name_of_tier: "Monthly",
     description: "Monthly payment of $125. All Amenities included."
 )
 
 Tier.create(
-    gym: Gym.find_by(name: "Zoo Culture"),
+    gym_id: Gym.first.id,
     name_of_tier: "Yearly",
     description: "Yearly payment of $1380. All Amenities included."
 )
 
 Tier.create(
-    gym: Gym.find_by(name: "Life Time"),
+    gym_id: Gym.second.id,
     name_of_tier: "Signature",
     description: "Monthly payment of $219. Unlimited Club Access and amenities."
 )
 
 Tier.create(
-    gym: Gym.find_by(name: "Life Time"),
+    gym_id: Gym.second.id,
     name_of_tier: "Standard",
     description: "Monthly payment of $179. Unlimited Club Access. Limited Amenities such as group training."
 )
 
-#AttachedMember
-
-40.times do 
-    AttachedMember.create(
-        name: Faker::Name.name,
-        phone: Faker::PhoneNumber.cell_phone.to_s,
-        membership_id: Membership.ids.sample
-    )
-end
 
 #Membership
 20.times do
     Membership.create(
-        gym: Gym.find_by(name: "Zoo Culture"),
-        tier: Tier.find_by(name_of_tier: "Monthly"),
+        gym_id: Gym.first.id,
+        tier_id: Tier.first.id,
         name: Faker::Name.name,
         email: Faker::Internet.email,
-        phone: Faker::PhoneNumber.cell_phone.to_s,
-        attached_member: AttachedMember.all.sample
+        phone: Faker::PhoneNumber.cell_phone.to_s
     )
 end
 
 20.times do
     Membership.create(
-        gym: Gym.find_by(name: "Life Time"),
-        tier: Tier.find_by(name_of_tier: "Monthly"),
+        gym_id: Gym.second.id,
+        tier_id: Tier.fourth.id,
         name: Faker::Name.name,
         email: Faker::Internet.email,
+        phone: Faker::PhoneNumber.cell_phone.to_s
+     )
+end
+
+#AttachedMembers
+40.times do 
+    AttachedMember.create(
+        name: Faker::Name.name,
         phone: Faker::PhoneNumber.cell_phone.to_s,
-        attached_member: AttachedMember.all.sample
+        membership_id: Membership.all.sample.id
     )
 end

@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_02_16_001943) do
+ActiveRecord::Schema[7.0].define(version: 2023_02_17_035023) do
   create_table "attached_members", force: :cascade do |t|
     t.string "name"
     t.string "phone"
@@ -30,17 +30,12 @@ ActiveRecord::Schema[7.0].define(version: 2023_02_16_001943) do
     t.string "name"
     t.string "email"
     t.string "phone"
-    t.integer "attached_member_id"
-    t.index ["attached_member_id"], name: "index_memberships_on_attached_member_id"
-    t.index ["gym_id"], name: "index_memberships_on_gym_id"
-    t.index ["tier_id"], name: "index_memberships_on_tier_id"
   end
 
   create_table "tiers", force: :cascade do |t|
-    t.integer "gym_id"
     t.string "name_of_tier"
     t.string "description"
-    t.index ["gym_id"], name: "index_tiers_on_gym_id"
+    t.integer "gym_id"
   end
 
 end
