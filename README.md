@@ -1,5 +1,6 @@
 # GymFinder
-![](https://www.youtube.com/watch?v=t0cUdAfFrwc)
+[Video Demo](https://www.youtube.com/watch?v=t0cUdAfFrwc)
+
 ## Front End
 Make sure to clone down the front end as well.
 <br />
