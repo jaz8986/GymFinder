@@ -2,9 +2,7 @@
 [Video Demo](https://www.youtube.com/watch?v=t0cUdAfFrwc)
 
 ## Front End
-Make sure to clone down the front end as well.
-<br />
-[Front End](https://github.com/jaz8986/GymFinder---frontend)
+Make sure to clone down the [front end](https://github.com/jaz8986/GymFinder---frontend) as well.
 
 ## Installation
 1. Clone down repo
