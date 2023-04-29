@@ -22,3 +22,6 @@ Currently gym’s are manually added to the database and gym memberships can be 
 
 ### Future Plans
 Ideally I’d like to have it identify the users current location and search for gyms around the area.
+
+## Technologies
+Leveraged the React.js library as our primary frontend framework and integrated Sinatra as backend technology.
